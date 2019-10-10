@@ -5,8 +5,10 @@
 		<title>Testing Lightning OUT</title>
 	</head>
 	<body>
-		<div class="container">
-    <script>
+		<div id="lightningLocator">
+    </div><!-- /.container -->
+	</body>
+	<script>
     $Lightning.use("c:showPDFDependency",    // name of the Lightning app
         function() {                  // Callback once framework and app loaded
             $Lightning.createComponent(
@@ -21,7 +23,5 @@
         'https://uat-nynas.cs107.force.com/Distribution'  // Community endpoint
     );
 </script>
-    </div><!-- /.container -->
-	</body>
 </html>
 
