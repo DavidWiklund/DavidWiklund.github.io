@@ -4,24 +4,27 @@
 <head>
 		<title>Testing Lightning OUT</title>
 	</head>
-	<body>
+	<body onload="init()">
 		<div id="lightningLocator">
     </div><!-- /.container -->
 	</body>
 	<script>
-    $Lightning.use("c:showPDFDependency",    // name of the Lightning app
-        function() {                  // Callback once framework and app loaded
-            $Lightning.createComponent(
-                "c:showPDF", // top-level component of your app
-                { },                  // attributes to set on the component when created
-                "lightningLocator",   // the DOM location to insert the component
-                function(cmp) {
-                    // callback when component is created and active on the page
-                }
-            );
-        },
-        'https://uat-nynas.cs107.force.com/Distribution'  // Community endpoint
+	function init(){
+    //let inputVariables = [];
+    $Lightning.use("c:showPDFDependency", function() {
+        $Lightning.createComponent(
+		"c:showPDF", 
+		{},
+                "lightningLocator",
+            	function (component) {
+                	//component.startFlow("SG_MVA_Triage_Flow_Lightning_Out", inputVariables);
+            	}
+	);
+    	},
+        'https://uat-nynas.cs107.force.com/Distribution'
     );
+}
+    
 </script>
 </html>
 
