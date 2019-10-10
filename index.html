@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script src="https://uat-nynas.cs107.force.com/Distribution/lightning/lightning.out.js"></script>
+<head>
+		<title>Testing Lightning OUT</title>
+	</head>
+	<body>
+		<div class="container">
+    <script>
+    $Lightning.use("c:showPDFDependency",    // name of the Lightning app
+        function() {                  // Callback once framework and app loaded
+            $Lightning.createComponent(
+                "c:showPDS", // top-level component of your app
+                { },                  // attributes to set on the component when created
+                "lightningLocator",   // the DOM location to insert the component
+                function(cmp) {
+                    // callback when component is created and active on the page
+                }
+            );
+        },
+        'https://uat-nynas.cs107.force.com/Distribution'  // Community endpoint
+    );
+</script>
+    </div><!-- /.container -->
+	</body>
+</html>
+
